@@ -2,41 +2,107 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>js</title>
+		<title>Mega</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     </head>
     <body>
-
-
-    	<script >
-            function quadratic_equation(a, b, c) {
-                var result = [];
-                var d = Math.sqrt(b*b - 4*a*c); 
-                if(d >= 0){
-                    var x1 = (-1)*d/(2*a);
-                    result.push(x1);
-                    var x2 = d/(2*a);
-                    result.push(x2);
-                }
-                else{
-                    result.push('Немає розвязків');
-                }
-                return result;
+        <style>
+            body{
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
             }
-
-    		a = prompt('a*x2+bx+с: Введіть коефіцієнт a');
-    		b = prompt('a*x2+bx+с: Введіть коефіцієнт b');
-    		c = prompt('a*x2+bx+с: Введіть коефіцієнт c');
-            
-            result = quadratic_equation(a, b, c);
-            
-            text = '';
-            for (i = 0; i < result.length; i++) { 
-                text += result[i].toString() + '<br>';
+            .content{
+                width: 100vw;
+                height: 100vh;
+                background-image: url(img2_blur.jpg);
+                background-size: cover;
+            }
+            .logo{
+                width: 90px;
+                height: 90px;
+                background: rgb(190,37,29);
+                border-radius: 5px;
+                position: relative;
+                top: 5%;
+                left: calc(50% - 45px);
+            }
+            .logo img{
+                margin-top: 4px;
+                margin-left: 12px;
+            }
+            .title{
+                width: 100%;
+                position: relative;
+                top: calc(35% - 1em - 90px);;
+                text-align: center;
+            }
+            .title p{
+                font-size: 30px;
+                color: white;
+            }
+            .buttons{
+                width: 100%;
+                height: 45px;
+                position: relative;
+                top: 30%;
+            }
+            .button{
+                    width: 300px;
+                    height: 40px;
+                    background: rgb(190,37,29);
+                    border-radius: 15px;
+                    text-align: center;
+                float: left;
+/*                    position: relative;*/
+            }
+            .but1{
+                margin-left: calc((100% - 10% - 300px - 300px) / 2);
+            }
+            .but2{
+                margin-left: 10%;
+            }
+            .button p{
+                margin-top: 0.7em;
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
             }
             
-            document.write(text);
+           @media screen and (max-width: 980px) and (min-height: 1500px) {
+               .buttons {
+                    top: 40%;
+                }
+                .button {
+                    width: 80%;
+                    height: 70px;
+                    border-radius: 30px;
+                }
+               .but1 {
+                    margin-left: 10%;
+                }
+               .but2 {
+                    margin-left: 10%;
+                    margin-top: 50px;
+                }
+                .button p{
+                    margin-top: 0.5em;
+                    font-size: 30px;
+                }
+               .logo{
+                   transform: scale(2);
+               }
+            }
+        </style>
 
-    	</script>
+        <div class="content">
+            <div class="logo"><img src="logo-en-white.png"></div>
+            <div class="title"><p>we will create your dreams</p></div>
+            <div class="buttons">
+                <a href="http://megaproduction.ge/"><div class="button but1"><p><b>mega</b> constructions</p></div></a>
+                <a href="#"><div class="button but2"><p><b>mega</b> productions</p></div></a>
+            </div>
+        </div>
 
 	</body>
 </html>
